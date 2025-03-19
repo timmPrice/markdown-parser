@@ -16,7 +16,3 @@ impl Default for InputStream {
     }
 }
 
-fn main() {
-    let input_stream = InputStream::default(); // Uses default values
-    println!("Input: {}, Pos: {}, Line: {}, Col: {}", input_stream.input, input_stream.pos, input_stream.line, input_stream.col);
-}
