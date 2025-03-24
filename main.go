@@ -1,21 +1,12 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
+	"markdown-parser/src"
 )
 
-func openFile(filepath string) {
-	marks := []string{}
-
-	file, err := os.Open(filepath)
-	if err != nil {
-		fmt.Printf("Error opening file", err.Error())
-	}
-
-}
-
 func main() {
-	fmt.Println("this is working")
+	fmt.Println(src.LookupToken("*"))
+	fmt.Println(src.LookupToken("##"))
+	fmt.Println(src.LookupToken("abc"))
 }

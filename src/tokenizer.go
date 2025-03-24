@@ -1,10 +1,6 @@
-package main
+package src
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import ()
 
 type tokenType string
 
@@ -48,13 +44,17 @@ var lookup = map[string]tokenType{
 	"^":   SUPERSCRIPT,
 }
 
-func lookup-token(line string) {
-    
+func LookupToken(litteral string) tokenType {
+	if token, exists := lookup[litteral]; exists {
+		return token
+	}
+
+	return "UNKNOWN"
 }
 
-func openFile(filepath string) {
-	file, err := os.Open(filepath)
-	if err != nil {
-		fmt.Printf("Error opening file", err.Error())
-	}
-}
+// func openFile(filepath string) {
+// 	file, err := os.Open(filepath)
+// 	if err != nil {
+// 		fmt.Printf("Error opening file", err.Error())
+// 	}
+// }
